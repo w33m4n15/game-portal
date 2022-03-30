@@ -50,7 +50,7 @@
 
     <div class="password__status">
       <p>
-        Your password status:<strong id="password_status" class="status__bad">
+        Your password status:<strong id="password_status" class="status__okay">
         </strong>
       </p>
     </div>
@@ -62,7 +62,7 @@
             >&nbsp COMPLETED</strong
           >
         </p>
-        <img src="./img/password.png" class="email__picture" alt="bg1" />
+        <img src="./img/bg1.jpg" class="email__picture" alt="bg1" />
       </div>
 
       <div class="email__comprimise">
@@ -71,14 +71,14 @@
             >&nbspCOMPLETED</strong
           >
         </p>
-        <img src="./img/emailpwnd.jpg" class="email__picture" alt="bg1" />
+        <img src="./img/bg1.jpg" class="email__picture" alt="bg1" />
       </div>
     </div>
   </div>
   <div class="pictures">
-    <img src="./img/fam1.jpg" class="personal__picture" alt="bg1" />
-    <img src="./img/fam2.jpg" class="personal__picture" alt="bg1" />
-    <img src="./img/fam3.jpg" class="personal__picture" alt="bg1" />
+    <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
+    <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
+    <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
   </div>
   <div class="btn__container__save">
     <button class="btn">Save</button>
@@ -86,6 +86,7 @@
       <a class="LogOut">Log Out</a>
     </button>
   </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./src/login.js"></script>
@@ -116,15 +117,15 @@
       console.log(strength);
       switch (strength) {
         case 3:
-          element.innerText = " medium";
+          element.innerText = " MEDIUM";
           console.log("medium");
           break;
         case 4:
-          element.innerText = " strong";
+          element.innerText = " STRONG";
           console.log("strong");
           break;
         default:
-          element.innerText = " weak";
+          element.innerText = " WEAK";
           console.log("weak");
           break;
       }

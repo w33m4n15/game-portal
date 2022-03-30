@@ -152,6 +152,10 @@ header {
   color: #c90000;
 }
 
+.status__okay {
+  color: var(--color-primary);
+}
+
 .email__picture {
   width: 375px;
   height: 211px;
@@ -229,4 +233,52 @@ header {
 .link {
   text-decoration: none;
   color: var(--color-primary);
+}
+
+/* .LogOut {
+  width: 10%;
+} */
+
+@media only screen and (max-width: 1080px) {
+  .email__picture {
+    max-width: 45%;
+  }
+
+  .pictures {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .personal__picture {
+    max-width: 100%;
+  }
+
+  .btn__container__save {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .email__picture {
+    max-width: 100%;
+  }
+
+  .pictures {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .personal__picture {
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 2%;
+  }
 }
