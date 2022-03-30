@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>HomePage</title>
+  <link rel="shortcut icon" href="./img/logo1.png" />
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  />
+  <link rel="stylesheet" href="./src/home.css" />
+</head>
+<body>
+  <div class="block"></div>
+  <header class="header">
+    <a href="./index.html">
+      <img class="logo" src="./img/logo2.png" alt="logo" />
+    </a>
+  </header>
+
+  <div class="container">
+    <div class="welcome">
+      <div class="profile__picture">
+        <img src="" alt="bg1" />
+        <div class="profile_picture_uploader">
+          <i class="fas fa-camera"></i>
+          <input
+            type="file"
+            onChange="onUploadProfile()"
+            accept="image/gif, image/jpg, image/jpeg, image/png"
+          />
+        </div>
+      </div>
+      <h2>
+        WELCOME
+        <strong class="username"></strong>
+      </h2>
+      <h3 class="usermail"></h3>
+    </div>
+
+    <div class="won">
+      <h2>
+        Congrats! You have won 500 AVeS credits. Click down below to select a
+        prize:
+      </h2>
+      <button class="btn">
+        <a class="link" href="./prizePage.html">Select</a>
+      </button>
+    </div>
+
+    <div class="password__status">
+      <p>
+        Your password status:<strong id="password_status" class="status__bad">
+        </strong>
+      </p>
+    </div>
+
+    <div class="single__row">
+      <div class="password__check">
+        <p>
+          Password complexity check:<strong class="status__good"
+            >&nbsp COMPLETED</strong
+          >
+        </p>
+        <img src="./img/password.png" class="email__picture" alt="bg1" />
+      </div>
+
+      <div class="email__comprimise">
+        <p>
+          Email account comprimise:<strong class="status__good"
+            >&nbspCOMPLETED</strong
+          >
+        </p>
+        <img src="./img/emailpwnd.jpg" class="email__picture" alt="bg1" />
+      </div>
+    </div>
+  </div>
+  <div class="pictures">
+    <img src="./img/fam1.jpg" class="personal__picture" alt="bg1" />
+    <img src="./img/fam2.jpg" class="personal__picture" alt="bg1" />
+    <img src="./img/fam3.jpg" class="personal__picture" alt="bg1" />
+  </div>
+  <div class="btn__container__save">
+    <button class="btn">Save</button>
+    <button class="btn" onClick="logOut()">
+      <a class="LogOut">Log Out</a>
+    </button>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./src/login.js"></script>
+  <script src="./src/home.js"></script>
+  <script>
+    // check login
+    if (localStorage.getItem("userData") === null) {
+      window.location.href = "./login.html";
+    }
+
+    // user data
+    let userData = JSON.parse(localStorage.getItem("userData"));
+    $(document).ready(function () {
+      $(".profile__picture img").attr("src", userData.profile);
+      $(".username").text(userData.name);
+      $(".usermail").text(userData.email);
+    });
+
+    function passwordValidator(password) {
+      let strength = 0;
+      let element = document.getElementById("password_status");
+
+      strength += /[A-Z]+/.test(password) ? 1 : 0;
+      strength += /[a-z]+/.test(password) ? 1 : 0;
+      strength += /[0-9]+/.test(password) ? 1 : 0;
+      strength += /[\W]+/.test(password) ? 1 : 0;
+
+      console.log(strength);
+      switch (strength) {
+        case 3:
+          element.innerText = " medium";
+          console.log("medium");
+          break;
+        case 4:
+          element.innerText = " strong";
+          console.log("strong");
+          break;
+        default:
+          element.innerText = " weak";
+          console.log("weak");
+          break;
+      }
+    }
+    passwordValidator(userData.password);
+  </script>
+</body>

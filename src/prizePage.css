@@ -1,0 +1,249 @@
+body {
+  --color-primary: #ffaf00;
+  --color-primary-dark: #eca200;
+  --color-secondary: #646464;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --color-button: #ffffff;
+  --color-hover: #000000;
+
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 5px 2%;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  cursor: pointer;
+  height: 35px;
+}
+
+.main__container .available__credits {
+  font: 500 1rem "Quicksand", sans-serif;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+}
+
+.main__container .available__credits .credit__balance {
+  color: var(--color-primary);
+  font-size: larger;
+}
+
+.main__container .prizes {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__container .prizes .prize__1__heading {
+  font: 500 1rem "Quicksand", sans-serif;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.main__container .prizes .prize__1__picture .prize__picture {
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.main__container .prizes .prize__picture {
+  max-width: 789px;
+  height: auto;
+  padding-left: 2%;
+}
+
+.cost {
+  color: var(--color-primary);
+  font-size: larger;
+}
+
+/* Checkbox */
+/* Customize the label (the container) */
+.container {
+  display: flex;
+  position: initial;
+  cursor: pointer;
+  font-size: 35px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  justify-content: end;
+  text-align: end;
+  padding: 10px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  margin-top: 1.5%;
+  position: relative;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--color-primary);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 800px) {
+  .main__container {
+    flex-direction: column;
+  }
+}
+
+.prize__wrapper {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.prize__wrapper .prize {
+  width: 100%;
+  max-width: 32%;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 45px 0px #00000047;
+  position: relative;
+}
+
+@media only screen and (max-width: 1080px) {
+  .prize__wrapper .prize {
+    max-width: 45%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .prize__wrapper .prize {
+    max-width: 100%;
+  }
+}
+
+.prize__wrapper .prize.checked {
+  border: 3px solid #0082ff;
+}
+
+.prize__wrapper .prize_checker {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0082ff;
+  transition: 0.2s ease;
+  opacity: 0;
+}
+
+.prize__wrapper .prize.checked .prize_checker {
+  opacity: 1;
+}
+
+.prize__wrapper .prize_checker i {
+  color: #0082ff;
+  font-size: 1.2rem;
+}
+
+.prize__wrapper .prize_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.8rem;
+}
+
+.prize__wrapper .prize_name,
+.prize__wrapper .prize_value {
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.prize__wrapper .prize_value {
+  color: var(--color-primary);
+}
+
+.prize__wrapper .prize_img_wrapper {
+  width: 100%;
+  position: relative;
+}
+/* 
+.prize__wrapper .prize_img_wrapper:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff40;
+} */
+
+.prize__wrapper .prize_img {
+  width: 100%;
+  transition: 0.2s ease;
+}
+
+.prize__wrapper .prize:hover .prize_img,
+.prize__wrapper .prize.checked .prize_img {
+  filter: brightness(1.1);
+}

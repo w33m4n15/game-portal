@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="./img/logo1.png" />
+  <title>PrizePage</title>
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&family=Poppins:wght@500;900&family=Roboto:wght@300&family=Sriracha&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./src/prizePage.css" />
+</head>
+<body>
+  <div class="block"></div>
+  <header>
+    <a href="./index.html"
+      ><img class="logo" src="./img/logo2.png" alt="logo"
+    /></a>
+  </header>
+
+  <div class="main__container">
+    <div class="available__credits">
+      <h1>
+        Availible Credits:
+        <strong class="credit__balance">
+          <?php echo $GLOBALS["user_data"]["credits"]; ?>
+        </strong>
+      </h1>
+    </div>
+
+    <div class="prize__wrapper"></div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./src/login.js"></script>
+  <script src="./src/home.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      // load prize
+      let prizeList = [
+        {
+          title: "Survival Kit, AVeS Promotion Gifts",
+          value: "100",
+          img: "bg1.jpg",
+        },
+        {
+          title:
+            "1 Hour one on one session with AVeS Specialist Cyber Security Overview",
+          value: "200",
+          img: "bg1.jpg",
+        },
+        {
+          title: "Risk Posture Assessment",
+          value: "300",
+          img: "bg1.jpg",
+        },
+        {
+          title: "Anti-Virus License for 12 months for 1 machine",
+          value: "400",
+          img: "bg1.jpg",
+        },
+        {
+          title: "Basic Website Pen Test",
+          value: "500",
+          img: "bg1.jpg",
+        },
+        {
+          title: "Health Check on AV and Firewall",
+          value: "600",
+          img: "bg1.jpg",
+        },
+        {
+          title: "Mail Security Health Check with Remediation Report",
+          value: "700",
+          img: "bg1.jpg",
+        },
+        {
+          title: "3 User Awareness license for 12 months",
+          value: "800",
+          img: "bg1.jpg",
+        },
+        {
+          title: "Vulnerability Scan on 1 Subnet",
+          value: "900",
+          img: "bg1.jpg",
+        },
+      ];
+      prizeList.forEach((item) => {
+        $(".prize__wrapper").append(
+          '<div class="prize" value="' +
+            item.value +
+            '"><div class="prize_img_wrapper">' +
+            '<img class="prize_img" src="img/' +
+            item.img +
+            '" alt="prize img" />' +
+            "</div>" +
+            '<span class="prize_checker">' +
+            '<i class="fal fa-check"></i>' +
+            "</span>" +
+            '<div class="prize_title">' +
+            '<h2 class="prize_name">' +
+            item.title +
+            "</h2>" +
+            '<span class="prize_value">' +
+            item.value +
+            "</span>" +
+            "</div>" +
+            "</div>"
+        );
+      });
+
+      // prize selection
+      let totalCredit = 0;
+      $(".prize").click(function () {
+        let prizeValue = $(this).attr("value");
+
+        if ($(this).hasClass("checked")) {
+          totalCredit = parseInt(totalCredit) - parseInt(prizeValue);
+          $(this).toggleClass("checked");
+        } else {
+          totalCredit = parseInt(totalCredit) + parseInt(prizeValue);
+          $(this).toggleClass("checked");
+        }
+
+        $(".credit__balance").text(totalCredit);
+      });
+    });
+  </script>
+</body>

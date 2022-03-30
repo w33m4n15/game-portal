@@ -1,0 +1,232 @@
+body {
+  --color-primary: #ffaf00;
+  --color-primary-dark: #eca200;
+  --color-secondary: #646464;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --color-button: #ffffff;
+  --color-hover: #000000;
+
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 5px 2%;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  cursor: pointer;
+  height: 35px;
+}
+
+.container {
+  background: rgb(255, 255, 255);
+  background-size: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .welcome {
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 20px;
+  font: 500 1rem "Quicksand", sans-serif;
+}
+
+.container .email__password__check {
+  font: 500 1rem "Quicksand", sans-serif;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.container .password__status {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.container .single__row .password__check {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.container .single__row .email__comprimise {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.container .won {
+  font: 500 1rem "Quicksand", sans-serif;
+  color: var(--color-button);
+  text-align: center;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+}
+
+.pictures {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+}
+
+.choose__file {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 20%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background: var(--color-button);
+}
+
+.btn:hover {
+  background: var(--color-hover);
+  color: var(--color-button);
+  transition: 1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn__container__save {
+  font: 500 1rem "Quicksand", sans-serif;
+  color: var(--color-button);
+  text-align: center;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+}
+
+.status__good {
+  color: #0dc000;
+}
+
+.status__bad {
+  color: #c90000;
+}
+
+.email__picture {
+  width: 375px;
+  height: 211px;
+  border: 1px solid var(--color-primary);
+  background-position: center;
+  background-size: cover;
+}
+
+.password__picture {
+  width: 375px;
+  height: 211px;
+  border: 1px solid var(--color-primary);
+  background-position: center;
+  background-size: cover;
+}
+
+.personal__picture {
+  width: 250px;
+  height: 150px;
+  border: 1px solid var(--color-primary);
+  background-position: center;
+  background-size: cover;
+}
+
+.profile__picture {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border: 1px solid var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.profile__picture img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile_picture_uploader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px -3px #0000007d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_picture_uploader i {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.profile_picture_uploader input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: auto;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.username {
+  color: var(--color-primary-dark);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-primary);
+}
