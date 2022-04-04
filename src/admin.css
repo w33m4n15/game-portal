@@ -1,0 +1,292 @@
+body {
+  --color-primary: #ffaf00;
+  --color-primary-dark: #eca200;
+  --color-secondary: #646464;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --color-button: #ffffff;
+  --color-hover: #000000;
+
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 5px 2%;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: larger;
+}
+
+.logo {
+  cursor: pointer;
+  height: 35px;
+}
+
+.container {
+  background: rgb(255, 255, 255);
+  background-size: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .welcome {
+  font: 500 1rem "Quicksand", sans-serif;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+}
+
+.container .email__password__check {
+  font: 500 1rem "Quicksand", sans-serif;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.container .main__boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.container .left__div {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  width: 40%;
+  float: left;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.container .right__div {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  width: 40%;
+  float: right;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: row;
+}
+
+.drowdown__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.pictures__info__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.pictures__input {
+  display: flex;
+  flex-direction: column;
+}
+
+.userImage {
+  height: 45%;
+  width: 45%;
+}
+
+.user__image {
+  height: 85%;
+  width: 85%;
+  border-radius: 5%;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .single__row .password__check {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.container .single__row .email__comprimise {
+  font: 500 1rem "Quicksand", sans-serif;
+  text-align: left;
+  padding-left: 5%;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.btn {
+  width: 20%;
+  padding: 1rem 2rem;
+  margin: 1%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background: var(--color-button);
+}
+
+.btn:hover {
+  background: var(--color-hover);
+  color: var(--color-button);
+  transition: 1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn__container__save {
+  font: 500 1rem "Quicksand", sans-serif;
+  color: var(--color-button);
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  text-align: center;
+}
+
+.status__good {
+  color: #0dc000;
+}
+
+.status__bad {
+  color: #c90000;
+}
+
+.status__okay {
+  color: var(--color-primary);
+}
+
+.username {
+  color: var(--color-primary-dark);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: var(--color-primary-dark);
+  transition: 0.3s;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+@media only screen and (max-width: 1080px) {
+  .email__picture {
+    max-width: 45%;
+  }
+
+  .pictures {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .personal__picture {
+    max-width: 100%;
+  }
+
+  .btn__container__save {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 50%;
+    margin-bottom: 2%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .email__picture {
+    max-width: 100%;
+  }
+
+  .pictures {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .personal__picture {
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 50%;
+    margin-bottom: 2%;
+  }
+}

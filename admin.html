@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>HomePage</title>
+  <link rel="shortcut icon" href="./img/logo1.png" />
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  />
+  <link rel="stylesheet" href="./src/admin.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="./index.html">
+      <img class="logo" src="./img/logo2.png" alt="logo" />
+    </a>
+  </header>
+
+  <div class="container">
+    <div class="welcome">
+      <h2>
+        WELCOME: A-Team Member
+        <strong class="username">John Doe</strong>
+      </h2>
+      <h3 class="usermail"></h3>
+    </div>
+
+    <div class="main__boxes">
+      <div class="left__div">
+        <div class="drowdown__container">
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Select User</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">User1</a>
+              <a href="#">User2</a>
+              <a href="#">User3</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="password__check__container">
+          <div class="pictures__input__heading">
+            <h3>Password Picture:</h3>
+          </div>
+
+          <div class="password__picture__input">
+            <form action="/action_page.php">
+              <label for="img">Select image:</label>
+              <input type="file" id="img" name="img" accept="image/*" />
+            </form>
+          </div>
+        </div>
+
+        <div class="email__pic__container">
+          <div class="pictures__input__heading">
+            <h3>Email Picture:</h3>
+          </div>
+
+          <div class="email__picture__input">
+            <form action="/action_page.php">
+              <label for="img">Select image:</label>
+              <input type="file" id="img" name="img" accept="image/*" />
+            </form>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="pictures__info__container">
+          <div class="pictures__input__heading">
+            <h3>Personal Pictures:</h3>
+          </div>
+
+          <div class="pictures__input">
+            <form action="/action_page.php">
+              <label for="img">Select image:</label>
+              <input type="file" id="img" name="img" accept="image/*" />
+            </form>
+
+            <form action="/action_page.php">
+              <label for="img">Select image:</label>
+              <input type="file" id="img" name="img" accept="image/*" />
+            </form>
+
+            <form action="/action_page.php">
+              <label for="img">Select image:</label>
+              <input type="file" id="img" name="img" accept="image/*" />
+            </form>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="additional__info">
+          <form>
+            <label for="ad1">Additional Info 1</label><br />
+            <input type="text" id="ad1" name="ad1" /><br />
+            <label for="ad2">Additional Info 2</label><br />
+            <input type="text" id="ad2" name="ad2" /><br />
+            <label for="ad3">Additional Info 3</label><br />
+            <input type="text" id="ad3" name="ad3" />
+          </form>
+        </div>
+      </div>
+
+      <div class="right__div">
+        <div class="userImage">
+          <img class="user__image" src="./img/johndoe.jpg" alt="jd" />
+        </div>
+        <div class="user__info">
+          <div class="info">
+            <h3>Name:</h3>
+            <p>&nbsp John Doe</p>
+          </div>
+          <div class="info">
+            <h3>Email:</h3>
+            <p>&nbsp jd@aves.co.za</p>
+          </div>
+          <div class="info">
+            <h3>Phone:</h3>
+            <p>&nbsp 0768985051</p>
+          </div>
+          <div class="info">
+            <h3>Password:</h3>
+            <p>&nbsp 123@dog</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn__container__save">
+      <button class="btn">Save</button>
+      <button class="btn">Logout</button>
+    </div>
+  </div>
+
+  <script src="./src/admin.js"></script>
+</body>

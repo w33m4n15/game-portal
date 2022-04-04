@@ -146,6 +146,7 @@ const addUser = (e) => {
   }
 };
 
+// Changing the forms from one to another
 document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector("#linkCreateAccount")
