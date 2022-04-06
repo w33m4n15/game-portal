@@ -28,9 +28,7 @@
     <div class="available__credits">
       <h1>
         Availible Credits:
-        <strong class="credit__balance">
-          <?php echo $GLOBALS["user_data"]["credits"]; ?>
-        </strong>
+        <strong class="credit__balance" id="credits"></strong>
       </h1>
     </div>
 
@@ -116,19 +114,19 @@
       });
 
       // prize selection
-      let totalCredit = 0;
+      let totalCredit = 500;
       $(".prize").click(function () {
         let prizeValue = $(this).attr("value");
 
         if ($(this).hasClass("checked")) {
-          totalCredit = parseInt(totalCredit) - parseInt(prizeValue);
-          $(this).toggleClass("checked");
-        } else {
           totalCredit = parseInt(totalCredit) + parseInt(prizeValue);
           $(this).toggleClass("checked");
+        } else {
+          totalCredit = parseInt(totalCredit) - parseInt(prizeValue);
+          $(this).toggleClass("checked");
         }
-
-        $(".credit__balance").text(totalCredit);
+        document.getElementById("credits").innerHTML = totalCredit;
+        localStorage.setItem("credits", JSON.stringify(credits));
       });
     });
   </script>

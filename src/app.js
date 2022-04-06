@@ -15,11 +15,3 @@ connection.connect((error) => {
   console.log("Connection established sucessfully");
 });
 connection.end((error) => {});
-
-userAccount = [
-  (userName = ""),
-  (surname = ""),
-  (email = ""),
-  (number = ""),
-  (password = ""),
-];

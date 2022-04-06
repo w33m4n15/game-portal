@@ -34,3 +34,8 @@ header {
   margin-top: 20px;
   font: 500 1rem "Quicksand", sans-serif;
 }
+
+.dropdowns {
+  display: flex;
+  flex-direction: row;
+}
