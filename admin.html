@@ -12,9 +12,7 @@
 </head>
 <body>
   <header class="header">
-    <a href="#">
-      <img class="logo" src="./img/logo2.png" alt="logo" />
-    </a>
+    <img class="logo" src="./img/logo2.png" alt="logo" />
   </header>
 
   <div class="container">
@@ -140,9 +138,12 @@
 
     <div class="btn__container__save">
       <button class="btn">Save</button>
-      <button class="btn">Logout</button>
+      <button class="btn" onClick="logOut()">
+        <a class="LogOut">Log Out</a>
+      </button>
     </div>
   </div>
 
   <script src="./src/admin.js"></script>
+  <script src="./src/login.js"></script>
 </body>
