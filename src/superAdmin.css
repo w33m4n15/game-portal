@@ -39,3 +39,16 @@ header {
   display: flex;
   flex-direction: row;
 }
+
+.container .table__container {
+  display: flex;
+  justify-content: center;
+}
+
+.container .table__container .table {
+  border: 1px;
+  border-color: #030303;
+  border-radius: 22px;
+  border-collapse: collapse;
+  font: 500 1rem "Quicksand", sans-serif;
+}
