@@ -176,6 +176,16 @@ p {
   text-align: center;
 }
 
+.btn a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.btn a:hover {
+  color: #fff;
+  transition: 0.8s;
+}
+
 .status__good {
   color: #0dc000;
 }
@@ -248,46 +258,8 @@ p {
   display: block;
 }
 
-@media only screen and (max-width: 1080px) {
-  .email__picture {
-    max-width: 45%;
-  }
-
-  .pictures {
-    /* flex-direction: column; */
-    align-items: center;
-  }
-
-  .personal__picture {
-    max-width: 100%;
-  }
-
-  .btn__container__save {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 50%;
-    margin-bottom: 2%;
-  }
+/* @media only screen and (max-width: 1080px) {
 }
 
 @media only screen and (max-width: 767px) {
-  .email__picture {
-    max-width: 100%;
-  }
-
-  .pictures {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .personal__picture {
-    max-width: 100%;
-  }
-
-  .btn {
-    width: 50%;
-    margin-bottom: 2%;
-  }
-}
+} */

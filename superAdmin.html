@@ -26,31 +26,35 @@
       </h2>
     </div>
 
-    <div class="table__container">
-      <table class="table">
-        <tr class="table__row">
-          <th>User</th>
-          <th>Role</th>
-        </tr>
-        <tr>
-          <td>
-            <select name="dog-names" id="dog-names">
-              <option value="username">User</option>
-            </select>
-          </td>
-          <td>
-            <select name="dog-names" id="dog-names">
-              <option value="standard">Standard</option>
-              <option value="admin">Admin</option>
-            </select>
-          </td>
-          <td>
-            <button action="submit">Add</button>
-          </td>
-        </tr>
-      </table>
-    </div>
+    <div class="table__button">
+      <div class="table__container">
+        <table border-collapse="collapse" class="table">
+          <tr class="table__row">
+            <th>User</th>
+            <th>Role</th>
+          </tr>
+          <tr>
+            <td>
+              <select name="users" id="dog-names">
+                <option value="username">User</option>
+              </select>
+            </td>
+            <td>
+              <div class="custom-select">
+                <select name="user-privilage" id="dog-names">
+                  <option value="standard">Standard</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-    <div class="privilages"></div>
+      <div class="add__button">
+        <button class="btn" action="submit">Add</button>
+      </div>
+    </div>
   </div>
+  <script src="./src/superAdmin.js"></script>
 </body>

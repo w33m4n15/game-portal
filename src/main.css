@@ -108,7 +108,9 @@ body {
 }
 
 .form__button:hover {
-  background: var(--color-primary-dark);
+  background: black;
+  color: var(--color-primary);
+  transition: 0.8s;
 }
 
 .form__button:active {

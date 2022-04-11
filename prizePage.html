@@ -32,6 +32,10 @@
       </h1>
     </div>
 
+    <div class="exceeded exceeded--hidden" id="exceeded">
+      <h1>Whoops! Not enough credits</h1>
+    </div>
+
     <div class="prize__wrapper"></div>
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -115,6 +119,9 @@
 
       // prize selection
       let totalCredit = 500;
+      const exceeded = document.querySelector("#exceeded");
+      document.getElementById("credits").innerHTML = totalCredit;
+
       $(".prize").click(function () {
         let prizeValue = $(this).attr("value");
 
@@ -125,8 +132,18 @@
           totalCredit = parseInt(totalCredit) - parseInt(prizeValue);
           $(this).toggleClass("checked");
         }
-        document.getElementById("credits").innerHTML = totalCredit;
-        localStorage.setItem("credits", JSON.stringify(credits));
+        if (totalCredit >= 0) {
+          exceeded.classList.add("exceeded--hidden");
+
+          document.getElementById("credits").innerHTML = totalCredit;
+          localStorage.setItem("credits", JSON.stringify(credits));
+        } else {
+          console.log("Credit limit exceeded");
+
+          // $(this).toggleClass("checked");
+
+          exceeded.classList.remove("exceeded--hidden");
+        }
       });
     });
   </script>
