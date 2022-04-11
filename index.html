@@ -75,10 +75,29 @@
       </div>
     </div>
   </div>
+
   <div class="pictures">
-    <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
-    <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
-    <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
+    <div class="divPersonal__picture">
+      <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
+    </div>
+    <div class="divPersonal__picture">
+      <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
+    </div>
+    <div class="divPersonal__picture">
+      <img src="./img/bg1.jpg" class="personal__picture" alt="bg1" />
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="info__1">
+      <p>More info</p>
+    </div>
+    <div class="info__2">
+      <p>More info</p>
+    </div>
+    <div class="info__3">
+      <p>More info</p>
+    </div>
   </div>
   <div class="btn__container__save">
     <button class="btn" onClick="logOut()">
@@ -90,6 +109,7 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./src/login.js"></script>
   <script src="./src/home.js"></script>
+  <script type="module" src="./src/app.js"></script>
   <script>
     // check login
     if (localStorage.getItem("userData") === null) {

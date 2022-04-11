@@ -25,8 +25,21 @@ function login(userNameMail, password, onSuccess, onError) {
           window.location.href = "./admin.html";
         }
       } else {
-        if (onError) {
-          onError();
+        if (
+          (userData.surname == userNameMail ||
+            userData.email == userNameMail) &&
+          userData.password == password &&
+          userData.permission == 3
+        ) {
+          if (onSuccess) {
+            onSuccess();
+          } else {
+            window.location.href = "./superAdmin.html";
+          }
+        } else {
+          if (onError) {
+            onError();
+          }
         }
       }
     }
@@ -86,44 +99,5 @@ function logOut() {
   setTimeout(() => {
     window.location.href = "./login.html";
   }, 500);
-}
-*/
-
-///////////////////////////////////////////////////////////////////
-// Experiment
-/*
-function login(userNameMail, password, onSuccess, onError) {
-  if (userNameMail && password) {
-    let userData = JSON.parse(localStorage.getItem("userData"));
-    console.log(userData);
-
-    if (
-      (userData.surname == userNameMail || userData.email == userNameMail) &&
-      userData.password == password &&
-      userData.permission == 1
-    ) {
-      if (onSuccess) {
-        onSuccess();
-      } else {
-        window.location.href = "./index.html";
-      }
-    } else {
-      if (
-        (userData.surname == userNameMail || userData.email == userNameMail) &&
-        userData.password == password &&
-        userData.permission == 2
-      ) {
-        if (onSuccess) {
-          onSuccess();
-        } else {
-          window.location.href = "./admin.html";
-        }
-      } else {
-        if (onError) {
-          onError();
-        }
-      }
-    }
-  }
 }
 */
