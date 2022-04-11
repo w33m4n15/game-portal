@@ -145,17 +145,6 @@ const addUser = (e) => {
 
     localStorage.setItem("userData", JSON.stringify(user));
     setFormMessage(createAccountForm, "success", "User has been registered");
-
-    // login with registered user
-    // login(user.surname, user.password, () => {
-    //   setTimeout(() => {
-    //     if (userAccounts.permission === 1) {
-    //       window.location.href = "./index.html";
-    //     } else {
-    //       window.location.href = "./login.html";
-    //     }
-    //   }, 200);
-    // });
   }
 };
 
