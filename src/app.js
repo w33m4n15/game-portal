@@ -1,3 +1,4 @@
+// SQL Connect
 const mysql = require("mysql");
 
 const con = mysql.createConnection({

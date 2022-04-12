@@ -1,3 +1,7 @@
+<?php
+  include_once 'src/php/dbc.php'
+?>
+
 <!DOCTYPE html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +23,7 @@
   </header>
 
   <div class="container">
+    <h1><?php echo "Hello World" ?></h1>
     <div class="welcome">
       <div class="profile__picture">
         <img src="" alt="bg1" />
@@ -109,7 +114,7 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./src/login.js"></script>
   <script src="./src/home.js"></script>
-  <script type="module" src="./src/app.js"></script>
+  <script src="./src/admin.js"></script>
   <script>
     // check login
     if (localStorage.getItem("userData") === null) {
